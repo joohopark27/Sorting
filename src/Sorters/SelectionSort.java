@@ -2,7 +2,6 @@ package Sorters;
 
 public class SelectionSort extends Sorter{
 
-    private int smallestNumPos;
     private int sortedPos = 0;
 
     public SelectionSort(int[] array){
@@ -14,7 +13,7 @@ public class SelectionSort extends Sorter{
     @Override
     protected void sortMethod() {
 
-        smallestNumPos = sortedPos;
+        int smallestNumPos = sortedPos;
 
         for(int i = sortedPos + 1; i < array.length; i++){
 

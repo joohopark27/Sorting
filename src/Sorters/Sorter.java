@@ -3,25 +3,23 @@ package Sorters;
 public abstract class Sorter {
 
     int[] array;
-    boolean sortComplete;
 
     Sorter(int[] array){
 
         long startTime = System.nanoTime();
-        sortComplete = false;
         this.array = array;
 
         sort();
         print();
 
-        System.out.println("\nIt took " + (System.nanoTime() - startTime) + " nanoseconds for completion");
+        System.out.println("\nIt took " + ((System.nanoTime() - startTime) / 1000000) + " milliseconds for completion");
     }
 
     private void sort(){
 
         while(!isSorted()){
 
-            print();
+//            print();
             sortMethod();
 
         }
@@ -48,7 +46,6 @@ public abstract class Sorter {
             }
         }
 
-        sortComplete = true;
         return true;
     }
 
