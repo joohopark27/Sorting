@@ -28,7 +28,7 @@ public class Randomizer {
 
         randomize();
 
-        return array.clone();
+        return array;
 
     }
 

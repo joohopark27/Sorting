@@ -3,19 +3,18 @@ package Sorters;
 public abstract class Sorter {
 
     int[] array;
+    private long startTime;
 
     Sorter(int[] array){
 
-        long startTime = System.nanoTime();
+        startTime = System.nanoTime();
         this.array = array;
 
         sort();
-        print();
 
-        System.out.println("\nIt took " + ((System.nanoTime() - startTime) / 1000000) + " milliseconds for completion");
     }
 
-    private void sort(){
+    protected void sort(){
 
         while(!isSorted()){
 
@@ -23,6 +22,9 @@ public abstract class Sorter {
             sortMethod();
 
         }
+
+        print();
+        end();
 
     }
 
@@ -38,7 +40,7 @@ public abstract class Sorter {
 
     }
 
-    private boolean isSorted(){
+    protected final boolean isSorted(){
 
         for(int i = 1; i < array.length; i++){
             if(array[i - 1] > array[i]){
@@ -47,6 +49,12 @@ public abstract class Sorter {
         }
 
         return true;
+    }
+
+    private void end(){
+
+        System.out.println("\nIt took " + ((System.nanoTime() - startTime) / 1000000) + " milliseconds for completion");
+
     }
 
     protected abstract void sortMethod();

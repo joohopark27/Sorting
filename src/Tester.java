@@ -13,10 +13,10 @@ public class Tester {
         int[] array = randomizer.getRandomArray();
 //        int[] array = {4, 0, 9, 6, 3, 1, 8, 2, 7, 5};
 
-//        new BubbleSort(array);
-//        new BogoSort(array);
-//        new SelectionSort(array);
-        new InsertionSort(array);
+//        new BubbleSort(array.clone());
+//        new BogoSort(array.clone());
+//        new SelectionSort(array.clone());
+        new InsertionSort(array.clone());
 
     }
 
