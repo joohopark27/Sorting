@@ -1,15 +1,17 @@
+package Sorters;
+
 public abstract class Sorter {
 
-    protected int[] array;
+    int[] array;
 
-    public Sorter(int[] array){
+    Sorter(int[] array){
 
         this.array = array;
         sort();
 
     }
 
-    public void print(){
+    protected void print(){
 
         for(int i : array){
 
@@ -21,6 +23,6 @@ public abstract class Sorter {
 
     }
 
-    public abstract void sort();
+    protected abstract void sort();
 
 }

@@ -1,3 +1,5 @@
+package Sorters;
+
 public class BubbleSort extends Sorter {
 
     public BubbleSort(int[] array){
