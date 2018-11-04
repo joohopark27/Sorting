@@ -17,7 +17,18 @@ public abstract class Sorter {
         System.out.println("\nIt took " + (System.nanoTime() - startTime) + " nanoseconds for completion");
     }
 
-    protected void print(){
+    private void sort(){
+
+        while(!isSorted()){
+
+            print();
+            sortMethod();
+
+        }
+
+    }
+
+    private void print(){
 
         for(int i : array){
 
@@ -25,9 +36,11 @@ public abstract class Sorter {
 
         }
 
+        System.out.println();
+
     }
 
-    protected boolean isSorted(){
+    private boolean isSorted(){
 
         for(int i = 1; i < array.length; i++){
             if(array[i - 1] > array[i]){
@@ -39,6 +52,6 @@ public abstract class Sorter {
         return true;
     }
 
-    protected abstract void sort();
+    protected abstract void sortMethod();
 
 }
