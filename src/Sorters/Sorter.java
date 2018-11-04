@@ -5,7 +5,6 @@ import java.util.Arrays;
 public abstract class Sorter {
 
     int[] array;
-    int[] previousArray;
     boolean sortComplete;
 
     Sorter(int[] array){
@@ -15,6 +14,7 @@ public abstract class Sorter {
         this.array = array;
 
         sort();
+        print();
 
         System.out.println("\nIt took " + (System.nanoTime() - startTime) + " nanoseconds for completion");
     }
@@ -33,9 +33,13 @@ public abstract class Sorter {
 
     protected void isSorted(){
 
-        sortComplete = Arrays.equals(array, previousArray);
-        previousArray = array.clone();
+        for(int i = 1; i < array.length; i++){
+            if(array[i - 1] > array[i]){
+                return;
+            }
+        }
 
+        sortComplete = true;
     }
 
     protected abstract void sort();
