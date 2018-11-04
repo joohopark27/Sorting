@@ -1,6 +1,7 @@
 import Mixer.Randomizer;
 import Sorters.BogoSort;
 import Sorters.BubbleSort;
+import Sorters.SelectionSort;
 
 public class Tester {
 
@@ -9,8 +10,11 @@ public class Tester {
         Randomizer randomizer = new Randomizer(10);
 
         int[] array = randomizer.getRandomArray();
-        new BubbleSort(array);
+//        int[] array = {4, 0, 9, 6, 3, 1, 8, 2, 7, 5};
+
+//        new BubbleSort(array);
 //        new BogoSort(array);
+        new SelectionSort(array);
 
     }
 
