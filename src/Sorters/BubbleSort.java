@@ -11,7 +11,10 @@ public class BubbleSort extends Sorter {
     @Override
     public void sort() {
 
-        for(int i = 0; i < array.length; i++){
+
+        for(int i = 0; i < array.length && !sortComplete; i++){
+
+            print();
 
             for(int j = 1; j < array.length; j++){
 
@@ -25,7 +28,7 @@ public class BubbleSort extends Sorter {
 
             }
 
-            print();
+            isSorted();
 
         }
 
