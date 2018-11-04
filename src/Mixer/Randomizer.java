@@ -1,3 +1,5 @@
+package Mixer;
+
 /**
  * creates a random array from 0 to n
  * created with Fisher-Yates shuffle
@@ -26,14 +28,13 @@ public class Randomizer {
 
         randomize();
 
-        return array;
+        return array.clone();
 
     }
 
     private void randomize(){
 
         int[] temp = array.clone();
-
 
         for(int i = array.length - 1; i >= 0; i--){
 

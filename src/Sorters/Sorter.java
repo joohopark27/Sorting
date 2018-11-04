@@ -1,7 +1,5 @@
 package Sorters;
 
-import java.util.Arrays;
-
 public abstract class Sorter {
 
     int[] array;
@@ -27,19 +25,18 @@ public abstract class Sorter {
 
         }
 
-        System.out.println();
-
     }
 
-    protected void isSorted(){
+    protected boolean isSorted(){
 
         for(int i = 1; i < array.length; i++){
             if(array[i - 1] > array[i]){
-                return;
+                return false;
             }
         }
 
         sortComplete = true;
+        return true;
     }
 
     protected abstract void sort();
