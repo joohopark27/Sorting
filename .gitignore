@@ -1,3 +1,4 @@
-#intelliJ
+###intelliJ###
 *.iml
 *.xml
+.idea/
