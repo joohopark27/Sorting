@@ -39,7 +39,19 @@ public abstract class Sorter {
 
     }
 
-    
+    /**
+     * changes a[a1] to a[a2]
+     *
+     * @param a1 location of place to switch
+     * @param a2 another location of place to switch
+     */
+    protected final void change(int a1, int a2){
+
+        int temp = array[a1];
+        array[a1] = array[a2];
+        array[a2] = temp;
+
+    }
 
     /**
      * checks if the array is sorted

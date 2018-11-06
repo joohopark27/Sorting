@@ -25,10 +25,7 @@ public class SelectionSort extends Sorter{
 
         }
 
-
-        int temp = array[smallestNumPos];
-        array[smallestNumPos] = array[sortedPos];
-        array[sortedPos] = temp;
+        change(smallestNumPos, sortedPos);
         sortedPos++;
 
     }

@@ -21,9 +21,7 @@ public class InsertionSort extends Sorter {
                 break;
             }else{
 
-                int temp = array[i];
-                array[i] = array[i + 1];
-                array[i + 1] = temp;
+                change(i, i + 1);
 
             }
 
