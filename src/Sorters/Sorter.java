@@ -76,6 +76,7 @@ public abstract class Sorter {
 
     }
 
+    protected abstract void init();
     protected abstract void sortMethod();
 
 }

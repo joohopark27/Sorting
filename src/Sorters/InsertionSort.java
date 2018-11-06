@@ -2,11 +2,18 @@ package Sorters;
 
 public class InsertionSort extends Sorter {
 
-    private int k = 0;
+    private int k;
 
     public InsertionSort(int[] array){
 
         super(array);
+
+    }
+
+    @Override
+    protected void init() {
+
+        k = 0;
 
     }
 

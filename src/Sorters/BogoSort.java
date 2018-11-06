@@ -9,6 +9,9 @@ public class BogoSort extends Sorter{
     }
 
     @Override
+    protected void init(){}
+
+    @Override
     protected void sortMethod() {
 
         randomize();

@@ -2,11 +2,18 @@ package Sorters;
 
 public class SelectionSort extends Sorter{
 
-    private int sortedPos = 0;
+    private int sortedPos;
 
     public SelectionSort(int[] array){
 
         super(array);
+
+    }
+
+    @Override
+    protected void init() {
+
+        sortedPos = 0;
 
     }
 
