@@ -23,7 +23,6 @@ public abstract class Sorter {
 
         }
 
-        print();
         end();
 
     }
@@ -40,6 +39,13 @@ public abstract class Sorter {
 
     }
 
+    
+
+    /**
+     * checks if the array is sorted
+     *
+     * @return if it is sorted or not
+     */
     protected final boolean isSorted(){
 
         for(int i = 1; i < array.length; i++){
@@ -53,6 +59,7 @@ public abstract class Sorter {
 
     private void end(){
 
+        print();
         System.out.println("\nIt took " + ((System.nanoTime() - startTime) / 1000000) + " milliseconds for completion");
 
     }
