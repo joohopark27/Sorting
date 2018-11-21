@@ -31,7 +31,7 @@ public abstract class Sorter {
     }
 
     /**
-     * changes a[a1] to a[a2]
+     * switches a[a1] to a[a2]
      *
      * @param a1 location of place to switch
      * @param a2 another location of place to switch
@@ -41,6 +41,8 @@ public abstract class Sorter {
         int temp = array[a1];
         array[a1] = array[a2];
         array[a2] = temp;
+
+//        System.out.println(this);
 
     }
 
@@ -64,10 +66,11 @@ public abstract class Sorter {
 
         if(isSorted()) {
             System.out.println("\nIt took " + ((System.nanoTime() - startTime) / 1000000) + " milliseconds for completion");
-            System.out.println(this);
         }else{
-            System.out.println("Sort incomplete");
+            System.out.println("\nSort incomplete");
         }
+
+        System.out.println(this);
     }
 
     protected abstract void sort();
