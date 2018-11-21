@@ -27,15 +27,18 @@ public abstract class Sorter {
 
     }
 
-    private void print(){
+    public String toString(){
+
+        String string = "[ ";
 
         for(int i : array){
 
-            System.out.print(i);
+            string += i + " ";
 
         }
 
-        System.out.println();
+        string += "]";
+        return string;
 
     }
 
@@ -71,8 +74,8 @@ public abstract class Sorter {
 
     private void end(){
 
-        print();
         System.out.println("\nIt took " + ((System.nanoTime() - startTime) / 1000000) + " milliseconds for completion");
+        System.out.println(this);
 
     }
 
