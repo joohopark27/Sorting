@@ -15,6 +15,8 @@ public abstract class Sorter {
     }
 
     protected void sort(){
+        
+        init();
 
         while(!isSorted()){
 
