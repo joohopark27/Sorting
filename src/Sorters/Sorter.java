@@ -11,20 +11,6 @@ public abstract class Sorter {
         this.array = array;
 
         sort();
-
-    }
-
-    protected void sort(){
-        
-        init();
-
-        while(!isSorted()){
-
-//            print();
-            sortMethod();
-
-        }
-
         end();
 
     }
@@ -76,12 +62,14 @@ public abstract class Sorter {
 
     private void end(){
 
-        System.out.println("\nIt took " + ((System.nanoTime() - startTime) / 1000000) + " milliseconds for completion");
-        System.out.println(this);
-
+        if(isSorted()) {
+            System.out.println("\nIt took " + ((System.nanoTime() - startTime) / 1000000) + " milliseconds for completion");
+            System.out.println(this);
+        }else{
+            System.out.println("Sort incomplete");
+        }
     }
 
-    protected abstract void init();
-    protected abstract void sortMethod();
+    protected abstract void sort();
 
 }

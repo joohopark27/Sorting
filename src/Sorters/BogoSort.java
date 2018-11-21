@@ -9,13 +9,11 @@ public class BogoSort extends Sorter{
     }
 
     @Override
-    protected void init(){}
+    protected void sort() {
 
-    @Override
-    protected void sortMethod() {
-
-        randomize();
-
+        while(!isSorted()) {
+            randomize();
+        }
     }
 
     private void randomize(){

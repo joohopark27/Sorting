@@ -2,8 +2,6 @@ package Sorters;
 
 public class SelectionSort extends Sorter{
 
-    private int sortedPos;
-
     public SelectionSort(int[] array){
 
         super(array);
@@ -11,30 +9,25 @@ public class SelectionSort extends Sorter{
     }
 
     @Override
-    protected void init() {
+    protected void sort() {
 
-        sortedPos = 0;
+        for (int sortedPos = 0; sortedPos < array.length; sortedPos++) {
 
-    }
+            int smallestNumPos = sortedPos;
 
-    @Override
-    protected void sortMethod() {
+            for (int i = sortedPos + 1; i < array.length; i++) {
 
-        int smallestNumPos = sortedPos;
+                if (array[smallestNumPos] > array[i]) {
 
-        for(int i = sortedPos + 1; i < array.length; i++){
+                    smallestNumPos = i;
 
-            if (array[smallestNumPos] > array[i]){
-
-                smallestNumPos = i;
+                }
 
             }
 
+            change(smallestNumPos, sortedPos);
+
         }
-
-        change(smallestNumPos, sortedPos);
-        sortedPos++;
-
     }
 
 }
