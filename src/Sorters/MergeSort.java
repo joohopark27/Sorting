@@ -2,10 +2,6 @@ package Sorters;
 
 public class MergeSort extends Sorter {
 
-    private int level;
-    private int i;
-    private int a1, a2;
-
     public MergeSort(int[] array){
 
         super(array);
@@ -30,19 +26,19 @@ public class MergeSort extends Sorter {
         mergeSort(start, middle);
         mergeSort(middle + 1, end);
 
-        int a1 = start, a2 = middle + 1;
+        int[] temp = array.clone();
+        int a0 = start, a1 = start, a2 = middle + 1;
+
         while(a1 <= middle && a2 <= end){
 
-            if(array[a1] > array[a2]){
+            array[a0++] = (temp[a1] > temp[a2]) ? temp[a2++] : temp[a1++];
 
-                change (a1, a2);
-                a1++;
-
-            }else{
-
-                a2++;
-
-            }
+        }
+        while(a1 <= middle){
+            array[a0++] = temp[a1++];
+        }
+        while(a2 <= end){
+            array[a0++] = temp[a2++];
         }
 
     }
