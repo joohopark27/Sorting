@@ -31,15 +31,17 @@ public class MergeSort extends Sorter {
 
         while(a1 <= middle && a2 <= end){
 
-            array[a0++] = (temp[a1] > temp[a2]) ? temp[a2++] : temp[a1++];
+            temp[a0++] = (compare(a1, a2)) ? array[a2++] : array[a1++];
 
         }
         while(a1 <= middle){
-            array[a0++] = temp[a1++];
+            temp[a0++] = array[a1++];
         }
         while(a2 <= end){
-            array[a0++] = temp[a2++];
+            temp[a0++] = array[a2++];
         }
+
+        array = temp;
 
     }
 

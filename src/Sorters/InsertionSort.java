@@ -14,7 +14,7 @@ public class InsertionSort extends Sorter {
         for (int k = 1; k < array.length; k++) {
             for (int i = k - 1; i >= 0; i--) {
 
-                if (array[i + 1] > array[i]) {
+                if (compare(i + 1, i)) {
                     break;
                 } else {
 

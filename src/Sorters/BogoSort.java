@@ -13,6 +13,7 @@ public class BogoSort extends Sorter{
 
         while(!isSorted()) {
             randomize();
+            compare(0, 0);
         }
     }
 

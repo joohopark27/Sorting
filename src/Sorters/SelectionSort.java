@@ -17,7 +17,7 @@ public class SelectionSort extends Sorter{
 
             for (int i = sortedPos + 1; i < array.length; i++) {
 
-                if (array[smallestNumPos] > array[i]) {
+                if (compare(smallestNumPos, i)) {
 
                     smallestNumPos = i;
 

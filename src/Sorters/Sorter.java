@@ -4,11 +4,13 @@ public abstract class Sorter {
 
     int[] array;
     private long startTime;
+    private int comparisons;
 
     Sorter(int[] array){
 
         startTime = System.nanoTime();
         this.array = array;
+        comparisons = 0;
 
         sort();
         end();
@@ -27,6 +29,18 @@ public abstract class Sorter {
 
         string += "]";
         return string;
+
+    }
+
+    /**
+     * compares 2 index
+     *
+     * @return true if a1 is bigger, false if a2 is bigger
+     */
+    protected final boolean compare(int a1, int a2){
+
+        comparisons++;
+        return array[a1] > array[a2];
 
     }
 
@@ -66,6 +80,7 @@ public abstract class Sorter {
 
         if(isSorted()) {
             System.out.println("\nIt took " + ((System.nanoTime() - startTime) / 1000000) + " milliseconds for completion");
+            System.out.println("It took " + comparisons + " comparisons");
         }else{
             System.out.println("\nSort incomplete");
         }
