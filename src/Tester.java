@@ -1,8 +1,5 @@
 import Mixer.Randomizer;
-import Sorters.BogoSort;
-import Sorters.BubbleSort;
-import Sorters.InsertionSort;
-import Sorters.SelectionSort;
+import Sorters.*;
 
 public class Tester {
 
@@ -11,12 +8,15 @@ public class Tester {
         Randomizer randomizer = new Randomizer(9999);
 
         int[] array = randomizer.getRandomArray();
-//        int[] array = {4, 0, 9, 6, 3, 1, 8, 2, 7, 5};
+//        int[] array = {5, 4, 3, 2, 1};
 
 //        new BubbleSort(array.clone());
+//        new CombSort(array.clone());
 //        new BogoSort(array.clone());
 //        new SelectionSort(array.clone());
-        new InsertionSort(array.clone());
+//        new InsertionSort(array.clone());
+//        new MergeSort(array.clone());
+        new RadixSort(array.clone());
 
     }
 
