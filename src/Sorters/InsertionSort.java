@@ -9,7 +9,7 @@ public class InsertionSort extends Sorter {
     }
 
     @Override
-    protected void sort() {
+    protected void sort(int start, int finish) {
 
         for (int k = 1; k < array.length; k++) {
             for (int i = k - 1; i >= 0; i--) {

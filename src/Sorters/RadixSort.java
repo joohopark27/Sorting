@@ -21,7 +21,7 @@ public class RadixSort extends Sorter{
     }
 
     @Override
-    protected void sort() {
+    protected void sort(int start, int finish) {
 
         int max = findMax();
         int base = 10;

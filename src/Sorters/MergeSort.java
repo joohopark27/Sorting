@@ -9,13 +9,7 @@ public class MergeSort extends Sorter {
     }
 
     @Override
-    protected void sort() {
-
-        mergeSort(0, array.length - 1);
-
-    }
-
-    private void mergeSort(int start, int end){
+    protected void sort(int start, int end){
 
         if(start == end){
             return;
@@ -23,8 +17,8 @@ public class MergeSort extends Sorter {
 
         int middle = (start + end) / 2;
 
-        mergeSort(start, middle);
-        mergeSort(middle + 1, end);
+        sort(start, middle);
+        sort(middle + 1, end);
 
         int[] temp = array.clone();
         int a0 = start, a1 = start, a2 = middle + 1;

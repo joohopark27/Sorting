@@ -9,7 +9,7 @@ public class CombSort extends Sorter {
     }
 
     @Override
-    protected void sort() {
+    protected void sort(int start, int finish) {
 
         for(int gap = array.length; gap > 0; gap--){
             for(int i = 0; i + gap < array.length; i++){

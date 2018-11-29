@@ -9,11 +9,10 @@ public class BogoSort extends Sorter{
     }
 
     @Override
-    protected void sort() {
+    protected void sort(int start, int finish) {
 
         while(!isSorted()) {
             randomize();
-            compare(0, 0);
         }
     }
 

@@ -12,7 +12,7 @@ public abstract class Sorter {
         this.array = array;
         comparisons = 0;
 
-        sort();
+        sort(0, array.length - 1);
         end();
 
     }
@@ -88,6 +88,6 @@ public abstract class Sorter {
         System.out.println(this);
     }
 
-    protected abstract void sort();
+    protected abstract void sort(int start, int finish);
 
 }

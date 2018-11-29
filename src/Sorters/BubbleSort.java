@@ -9,7 +9,7 @@ public class BubbleSort extends Sorter {
     }
 
     @Override
-    public void sort() {
+    public void sort(int start, int finish) {
 
         for(int i = 0; i < array.length; i++) {
             for (int j = 1; j < array.length - i; j++) {

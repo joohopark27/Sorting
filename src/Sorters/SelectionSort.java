@@ -9,7 +9,7 @@ public class SelectionSort extends Sorter{
     }
 
     @Override
-    protected void sort() {
+    protected void sort(int start, int finish) {
 
         for (int sortedPos = 0; sortedPos < array.length; sortedPos++) {
 
