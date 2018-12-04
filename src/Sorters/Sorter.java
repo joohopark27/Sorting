@@ -12,7 +12,8 @@ public abstract class Sorter {
         this.array = array;
         comparisons = 0;
 
-        sort(0, array.length - 1);
+//        sort(0, array.length - 1);
+        sort(0, 5);
         end();
 
     }
