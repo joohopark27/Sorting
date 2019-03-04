@@ -11,7 +11,7 @@ public class QuickSort extends Sorter {
     @Override
     protected void sort(int start, int finish) {
 
-        if(start == finish){
+        if(finish <= start || finish < 0){
 
             return;
 
@@ -23,9 +23,7 @@ public class QuickSort extends Sorter {
         int smaller = start;
         int larger = finish;
 
-        System.out.println(array[pivot] + " " + pivot);
-
-        for(int i = 0; i < array.length; i++){
+        for(int i = start; i < finish + 1; i++){
 
             if(i == pivot){
                 continue;
@@ -34,26 +32,25 @@ public class QuickSort extends Sorter {
             if(compare(i, pivot)){
 
                 temp[larger--] = array[i];
-                System.out.println(larger);
 
             }else{
 
                 temp[smaller++] = array[i];
-                System.out.println(smaller);
 
             }
 
         }
 
-        System.out.println(this);
         temp[smaller] = array[pivot];
-        System.out.println(" " + smaller);
+        array = temp;
+
+        /*System.out.println(" " + smaller);
         System.out.println(" " + larger);
         System.out.println(smaller == larger);
-        array = temp;
-        System.out.println(this);
-//        sort(start, smaller - 1);
-//        sort(smaller + 1, finish);
+        System.out.println(this);*/
+
+        sort(start, smaller - 1);
+        sort(smaller + 1, finish);
     }
 
 }

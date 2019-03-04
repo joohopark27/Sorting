@@ -5,7 +5,7 @@ public class Tester {
 
     public static void main(String[] args) {
 
-        Randomizer randomizer = new Randomizer(10);
+        Randomizer randomizer = new Randomizer(10000);
 
         int[] array = randomizer.getRandomArray();
 //        int[] array = {5, 4, 3, 2, 1};
@@ -17,7 +17,8 @@ public class Tester {
 //        new InsertionSort(array.clone());
 //        new MergeSort(array.clone());
 //        new RadixSort(array.clone());
-        new QuickSort(array.clone());
+//        new QuickSort(array.clone());
+        new HeapSort(array.clone());
 
     }
 
