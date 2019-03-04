@@ -20,8 +20,6 @@ public class HeapSort extends Sorter {
 
         }
 
-        System.out.println(this);
-
         for (int i = start; i <= finish; i++){
 
             remove(start);
